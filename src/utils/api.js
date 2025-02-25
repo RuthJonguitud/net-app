@@ -11,7 +11,7 @@ export async function getUser(user_id) {
   }
   
 
-export async function getUserPosts(user_id) {
+export async function getUserPosts(user_id=1) {
   const response = await fetch(`${API_URL}/posts?userId=${user_id}`);
   return response.json();
 }
